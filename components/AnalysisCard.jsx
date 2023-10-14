@@ -21,7 +21,7 @@ const AnalysisCard = () => {
                     />
                 </div>
                 <div>
-                    <Button variant="outline" className="w-[500px] bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white px-8 py-4 rounded-md transition duration-150" onClick={() => setShowAnalysis(!showAnalysis)}>Check Your Reimbursement</Button>
+                    <Button variant="outline" className="w-[500px] bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105 px-8 py-4 rounded-md transition duration-150" onClick={() => setShowAnalysis(!showAnalysis)}>Check Your Reimbursement</Button>
                 </div>
                 <div>
                     {showAnalysis &&
@@ -29,7 +29,7 @@ const AnalysisCard = () => {
                             <div className='flex flex-row gap-2'>Wow! 🎉🎉🎉 you can be reimbursed <div className='text-[#ed7255]'>{0.3}</div> ETH.</div>
                             <div>Click here to cliam 👇</div>
                             <div>
-                                {isDisconnected ? <ConnectButton /> : <Button variant="outline" className="w-[200px] bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white px-8 py-4 rounded-md transition duration-150">Claim</Button>}
+                                {isDisconnected ? <ConnectButton /> : <Button variant="outline" className="w-[200px] bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105 px-8 py-4 rounded-md transition duration-150">Claim</Button>}
                             </div>
                         </div>
                     }

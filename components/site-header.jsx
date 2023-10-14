@@ -79,6 +79,11 @@ export function SiteHeader() {
           >
             <DiscordLogoIcon className="h-6 w-6" />
           </Button> */}
+          <Button
+            className="bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105"
+          >
+            Project Admin
+          </Button>
           <ConnectButton />
         </div>
       </div>
