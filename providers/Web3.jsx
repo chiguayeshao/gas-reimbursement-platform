@@ -50,7 +50,7 @@ export function Web3Provider(props) {
             chains={chains}
             theme={lightTheme({
               accentColor: "#fadfba",
-              accentColorForeground: "white",
+              accentColorForeground: "#ed7255",
               borderRadius: "medium"
             })}>
             {props.children}
