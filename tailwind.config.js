@@ -61,19 +61,15 @@ module.exports = {
         sans: ["var(--font-sans)", ...fontFamily.sans]
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" }
+        breatheYellow: {
+          '0%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0)' },
+          '50%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0.8)' },
+          '100%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0)' },
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 }
-        }
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out"
-      }
+        breatheYellow: 'breatheYellow 3s infinite',
+      },
     }
   },
   plugins: [require("tailwindcss-animate")]

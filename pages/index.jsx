@@ -2,10 +2,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { Button } from "@/components/ui/button"
+import AnalysisCard from "@/components/AnalysisCard"
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Gas Reimbursement Platform</title>
         <meta
@@ -14,6 +15,10 @@ const Home = () => {
         />
         <link href="/favicon.ico" rel="icon" />
       </Head>
+
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <AnalysisCard />
+      </div>
 
     </div>
   )
