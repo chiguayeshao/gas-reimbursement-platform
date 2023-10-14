@@ -62,9 +62,9 @@ module.exports = {
       },
       keyframes: {
         breatheYellow: {
-          '0%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0)' },
-          '50%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0.8)' },
-          '100%': { boxShadow: '0 0 25px 5px rgba(255, 223, 0, 0)' },
+          '0%': { boxShadow: '0 0 25px 5px rgba(250, 223, 186, 0)' },
+          '50%': { boxShadow: '0 0 25px 5px rgba(250, 223, 186, 0.8)' },
+          '100%': { boxShadow: '0 0 25px 5px rgba(250, 223, 186, 0)' },
         },
       },
       animation: {

@@ -6,12 +6,12 @@ const AnalysisCard = () => {
     return (
         <div className="w-2/3 bg-white p-8 rounded-3xl shadow-md animate-breatheYellow border-4 border-[#fadfba]">
             <div className='flex flex-col gap-8 items-center'>
-                <h1 className="text-2xl text-[#ed7255] font-bold">How much can you reimbursement from dapp?</h1>
+                <h1 className="text-2xl text-[#fadfba] font-bold">How much can you reimbursement from dapp?</h1>
                 <div>
                     <input
-                        className="w-[500px] p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none"
+                        className="w-[500px] p-4 placeholder:text-[#fadfba] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none"
                         type="text"
-                        placeholder='Please Enter Your ENS name Or Ethereum Address'
+                        placeholder='Please Enter Your ENS Name Or Ethereum Address'
                     />
                 </div>
                 <div> 
