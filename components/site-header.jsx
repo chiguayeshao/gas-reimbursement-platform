@@ -23,7 +23,7 @@ export function SiteHeader() {
         <div className="flex flex-row justify-between gap-8 items-center text-base font-medium text-muted-foreground">
           <Link href="/" className="flex flex-row gap-2 items-center">
             {/* <Image src="/logo.png" alt="Logo" width={48} height={48} /> */}
-            <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#159895] to-[#1A5F7A]">
+            <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#fadfba] to-[#ed7255]">
               Gas Reimbursement
             </div>
           </Link>
@@ -61,7 +61,7 @@ export function SiteHeader() {
             </>
           )}
 
-          <Button
+          {/* <Button
             variant="ghost"
             size="icon"
             onClick={() =>
@@ -69,8 +69,8 @@ export function SiteHeader() {
             }
           >
             <TwitterLogoIcon className="h-6 w-6" />
-          </Button>
-          <Button
+          </Button> */}
+          {/* <Button
             variant="ghost"
             size="icon"
             onClick={() =>
@@ -78,7 +78,7 @@ export function SiteHeader() {
             }
           >
             <DiscordLogoIcon className="h-6 w-6" />
-          </Button>
+          </Button> */}
           <ConnectButton />
         </div>
       </div>
