@@ -38,19 +38,31 @@ const ProjectCard = () => {
                         </div>
                         <div className="flex flex-col space-y-1.5">
                             <Label htmlFor="totalReimbursementAmount">Total Reimbursement Amount</Label>
-                            <Input id="totalReimbursementAmount" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Total Reimbursement Amount" />
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                                <Input id="totalReimbursementAmount" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Total Reimbursement Amount" />
+                                <Button variant="secondary" className='w-[84px]'>ETH</Button>
+                            </div>
                         </div>
                         <div className="flex flex-col space-y-1.5">
                             <Label htmlFor="reimbursementDeadline">reimbursementDeadline</Label>
-                            <Input id="reimbursementDeadline" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Deadline" />
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                                <Input id="reimbursementDeadline" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Deadline" />
+                                <Button variant="secondary" className='w-[84px]'>Days</Button>
+                            </div>
                         </div>
                         <div className="flex flex-col space-y-1.5">
                             <Label htmlFor="reimbursementRatio">ReimbursementRatio</Label>
-                            <Input id="reimbursementRatio" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Ratio" />
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                                <Input id="reimbursementRatio" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Ratio" />
+                                <Button variant="secondary" className='w-[84px]'>%</Button>
+                            </div>
                         </div>
                         <div className="flex flex-col space-y-1.5">
                             <Label htmlFor="reimbursementLimit">reimbursementLimit</Label>
-                            <Input id="reimbursementLimit" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Limit" />
+                            <div className='flex flex-row gap-2 items-center justify-center'>
+                                <Input id="reimbursementLimit" className='p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none' placeholder="Enter your Reimbursement Limit" />
+                                <Button variant="secondary" className='w-[84px]'>Times</Button>
+                            </div>
                         </div>
                     </div>
                 </CardContent>
