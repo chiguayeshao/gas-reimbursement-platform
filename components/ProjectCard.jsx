@@ -11,6 +11,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
+import { useContractWrite } from 'wagmi'
+
 const ProjectCard = () => {
   const [projectAddress, setProjectAddress] = useState("")
   const [eventName, setEventName] = useState("")
