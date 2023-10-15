@@ -40,26 +40,6 @@ export function SiteHeader() {
           >
             <GitHubLogoIcon className="h-6 w-6" />
           </Button> */}
-          {router.pathname !== "/" && (
-            <>
-              <Button
-                className="bg-[#57C5B6] text-white transform hover:scale-105 hover:bg-[#159895]"
-                onClick={() =>
-                  window.open("https://sepoliafaucet.com", "_blank")
-                }
-              >
-                Faucet
-              </Button>
-              {/* <Button
-                className="bg-[#57C5B6] text-white transform hover:scale-105 hover:bg-[#159895]"
-                onClick={() =>
-                  window.open("https://discord.gg/DUZMwJzfsP", "_blank")
-                }
-              >
-                Contact
-              </Button> */}
-            </>
-          )}
 
           {/* <Button
             variant="ghost"
@@ -81,6 +61,9 @@ export function SiteHeader() {
           </Button> */}
           <Button
             className="bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105"
+            onClick={() => {
+              router.push("/projectAdmin")
+            }}
           >
             Project Admin
           </Button>
