@@ -11,15 +11,26 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
-import { useContractWrite } from 'wagmi'
+import { useContractWrite } from "wagmi"
+import { CONTRACT_ADDRESS } from "@/config/address"
+import Abi from "@/config/GasReimbursement.json"
+import { utils, ethers } from "ethers"
 
 const ProjectCard = () => {
   const [projectAddress, setProjectAddress] = useState("")
   const [eventName, setEventName] = useState("")
-  const [totalReimbursementAmount, setTotalReimbursementAmount] = useState("")
+  const [totalReimbursementAmount, setTotalReimbursementAmount] = useState(0)
   const [reimbursementDeadline, setReimbursementDeadline] = useState("")
   const [reimbursementRatio, setReimbursementRatio] = useState("")
   const [reimbursementLimit, setReimbursementLimit] = useState("")
+
+  const { data, isLoading, isSuccess, write } = useContractWrite({
+    address: CONTRACT_ADDRESS,
+    abi: Abi,
+    functionName: "setParameters",
+  })
+
+  console.log(data,'fuck data')
 
   const handleDeployClick = () => {
     console.log({
@@ -29,6 +40,17 @@ const ProjectCard = () => {
       reimbursementDeadline,
       reimbursementRatio,
       reimbursementLimit
+    })
+    write({
+      args: [
+        projectAddress,
+        eventName,
+        utils.parseEther(totalReimbursementAmount.toString()),
+        reimbursementDeadline,
+        reimbursementRatio,
+        reimbursementLimit
+      ],
+      value: utils.parseEther(totalReimbursementAmount.toString())
     })
   }
 
