@@ -45,7 +45,7 @@ const ProjectCard = () => {
       args: [
         projectAddress,
         eventName,
-        utils.parseEther(totalReimbursementAmount.toString()),
+        totalReimbursementAmount,
         reimbursementDeadline,
         reimbursementRatio,
         reimbursementLimit

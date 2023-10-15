@@ -4,15 +4,51 @@ import { Button } from "@/components/ui/button"
 import { useAccount } from "wagmi"
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 
+import { useContractRead, useContractWrite } from "wagmi"
+import { CONTRACT_ADDRESS } from "@/config/address"
+import Abi from "@/config/GasReimbursement.json"
+
 const AnalysisCard = () => {
   const [showAnalysis, setShowAnalysis] = useState(false)
   const [addressOrENS, setAddressOrENS] = useState("")
+  const [isCheckOpen, setIsCheckOpen] = useState(false)
 
   const { isDisconnected } = useAccount()
 
+  const { data, isError, isLoading } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: Abi,
+    functionName: "checkReimbursement",
+    enabled: isCheckOpen,
+    args: [addressOrENS]
+  })
+
+  console.log(data, "fuck data1111")
+
+  const {
+    data: claimReimbursementData,
+    isLoading: claimReimbursementIsLoading,
+    isSuccess: claimReimbursementIsSuccess,
+    write: claimReimbursement
+  } = useContractWrite({
+    address: CONTRACT_ADDRESS,
+    abi: Abi,
+    functionName: "claimReimbursement"
+  })
+
   const handleCheckReimbursement = () => {
     console.log(addressOrENS)
+    setIsCheckOpen(true)
+    // if (data) {
+    // setIsCheckOpen(false)
     setShowAnalysis(!showAnalysis)
+    // }
+  }
+
+  const handleCLaim = () => {
+    claimReimbursement({
+      args: [addressOrENS]
+    })
   }
 
   return (
@@ -54,6 +90,7 @@ const AnalysisCard = () => {
                   <Button
                     variant="outline"
                     className="w-[200px] bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105 px-8 py-4 rounded-md transition duration-150"
+                    onClick={() => handleCLaim()}
                   >
                     Claim
                   </Button>
