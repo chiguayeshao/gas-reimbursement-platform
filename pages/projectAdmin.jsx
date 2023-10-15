@@ -1,8 +1,11 @@
+import ProjectCard from '@/components/ProjectCard'
 import React from 'react'
 
 const projectAdmin = () => {
   return (
-    <div>projectAdmin</div>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <ProjectCard />
+    </div>
   )
 }
 
