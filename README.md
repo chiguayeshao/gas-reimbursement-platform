@@ -1,5 +1,7 @@
 ## Gasgift Reimbursement Protocol (GRP)
 
+![](./public/gas-reimbursement.png)
+
 ### Introduction
 Gasgift Reimbursement Protocol (GRP) pioneers the first trustless Activity Scoring Protocol on the EVM, integrating the cutting-edge Zero-Knowledge (ZK) technology from Axiom, to create a novel pathway for gas reimbursement initiatives. The Gas Reimbursement Platform, built atop this scoring protocol, emerges as the first of its kind on EVM, offering a trustless gas reimbursement solution, further enhanced by the ZK proofs facilitated through Axiom, ensuring transparency and accuracy in user activity scoring and gas fee reimbursements.
 
