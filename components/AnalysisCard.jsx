@@ -7,11 +7,13 @@ import { ConnectButton } from "@rainbow-me/rainbowkit"
 import { useContractRead, useContractWrite } from "wagmi"
 import { CONTRACT_ADDRESS } from "@/config/address"
 import Abi from "@/config/GasReimbursement.json"
+import { utils } from "ethers"
 
 const AnalysisCard = () => {
   const [showAnalysis, setShowAnalysis] = useState(false)
   const [addressOrENS, setAddressOrENS] = useState("")
   const [isCheckOpen, setIsCheckOpen] = useState(false)
+  const [reimbursedValue, setReimbursedValue] = useState(0)
 
   const { isDisconnected } = useAccount()
 
@@ -22,8 +24,6 @@ const AnalysisCard = () => {
     enabled: isCheckOpen,
     args: [addressOrENS]
   })
-
-  console.log(data, "fuck data1111")
 
   const {
     data: claimReimbursementData,
@@ -37,12 +37,12 @@ const AnalysisCard = () => {
   })
 
   const handleCheckReimbursement = () => {
-    console.log(addressOrENS)
     setIsCheckOpen(true)
-    // if (data) {
-    // setIsCheckOpen(false)
-    setShowAnalysis(!showAnalysis)
-    // }
+    if (data) {
+      setReimbursedValue(utils.formatEther(data[1]))
+      setIsCheckOpen(false)
+      setShowAnalysis(true)
+    }
   }
 
   const handleCLaim = () => {
@@ -80,7 +80,7 @@ const AnalysisCard = () => {
             <div className="flex flex-col items-center justify-center gap-3">
               <div className="flex flex-row gap-2">
                 Wow! 🎉🎉🎉 you can be reimbursed{" "}
-                <div className="text-[#ed7255]">{0.3}</div> ETH.
+                <div className="text-[#ed7255]">{reimbursedValue}</div> ETH.
               </div>
               <div>Click here to cliam 👇</div>
               <div>

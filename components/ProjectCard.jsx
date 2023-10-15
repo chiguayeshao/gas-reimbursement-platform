@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label"
 import { useContractWrite } from "wagmi"
 import { CONTRACT_ADDRESS } from "@/config/address"
 import Abi from "@/config/GasReimbursement.json"
-import { utils, ethers } from "ethers"
+import { utils } from "ethers"
 
 const ProjectCard = () => {
   const [projectAddress, setProjectAddress] = useState("")
@@ -30,14 +30,19 @@ const ProjectCard = () => {
     functionName: "setParameters",
   })
 
-  console.log(data,'fuck data')
-
   const handleDeployClick = () => {
+    const currentTimestamp = Math.floor(Date.now() / 1000);
+    const daysInSeconds = Number(reimbursementDeadline) * 86400;
+    const newDeadlineTimestamp = currentTimestamp + daysInSeconds;
+
+    const totalReimbursementAmountInWei = utils.parseEther(totalReimbursementAmount.toString());
+    const totalReimbursementAmountString = totalReimbursementAmountInWei.toString();
+
     console.log({
       projectAddress,
       eventName,
-      totalReimbursementAmount,
-      reimbursementDeadline,
+      totalReimbursementAmount: totalReimbursementAmountString,
+      reimbursementDeadline: newDeadlineTimestamp,
       reimbursementRatio,
       reimbursementLimit
     })
@@ -45,12 +50,12 @@ const ProjectCard = () => {
       args: [
         projectAddress,
         eventName,
-        totalReimbursementAmount,
-        reimbursementDeadline,
+        totalReimbursementAmountString,
+        newDeadlineTimestamp,
         reimbursementRatio,
         reimbursementLimit
       ],
-      value: utils.parseEther(totalReimbursementAmount.toString())
+      value: totalReimbursementAmountString
     })
   }
 
@@ -125,7 +130,7 @@ const ProjectCard = () => {
                 <Input
                   id="reimbursementRatio"
                   className="p-4 placeholder:text-[#ed7255] rounded-md border border-gray-600 focus:border-yellow-400 focus:outline-none"
-                  placeholder="Enter your Reimbursement Ratio"
+                  placeholder="Enter your Reimbursement Ratio Or Use GasLockR By Default"
                   value={reimbursementRatio}
                   onChange={(e) => setReimbursementRatio(e.target.value)}
                 />
