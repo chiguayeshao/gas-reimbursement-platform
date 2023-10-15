@@ -1,0 +1,196 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			}
+		],
+		"name": "checkReimbursement",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "reimbursements",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalReimbursement",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			}
+		],
+		"name": "claimReimbursement",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "projectSettings",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "projectAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalReimbursementAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementDeadline",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementRatio",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementLimit",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "projects",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "projectAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "eventName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "totalReimbursementAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementDeadline",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementRatio",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "reimbursementLimit",
+				"type": "uint256"
+			}
+		],
+		"name": "setParameters",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "projectAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "gasFee",
+				"type": "uint256"
+			}
+		],
+		"name": "updateReimbursement",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "userReimbursement",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	}
+]
