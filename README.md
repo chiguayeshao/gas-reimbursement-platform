@@ -1,7 +1,7 @@
-## Gasgift Reimbursement Protocol (GRP)
+## GasGift Reimbursement Protocol (GRP)
 
 ### Introduction
-Gasgift Reimbursement Protocol (GRP) pioneers the first trustless Activity Scoring Protocol on the EVM, integrating the cutting-edge Zero-Knowledge (ZK) technology from Axiom, to create a novel pathway for gas reimbursement initiatives. The Gas Reimbursement Platform, built atop this scoring protocol, emerges as the first of its kind on EVM, offering a trustless gas reimbursement solution, further enhanced by the ZK proofs facilitated through Axiom, ensuring transparency and accuracy in user activity scoring and gas fee reimbursements.
+GasGift Reimbursement Protocol (GRP) pioneers the first trustless Activity Scoring Protocol on the EVM, integrating the cutting-edge Zero-Knowledge (ZK) technology from Axiom, to create a novel pathway for gas reimbursement initiatives. The Gas Reimbursement Platform, built atop this scoring protocol, emerges as the first of its kind on EVM, offering a trustless gas reimbursement solution, further enhanced by the ZK proofs facilitated through Axiom, ensuring transparency and accuracy in user activity scoring and gas fee reimbursements.
 
 ### Architecture
 ![architecture](https://github.com/chiguayeshao/gas-reimbursement-platform/blob/main/public/architecture.png)
@@ -34,8 +34,8 @@ Gasgift Reimbursement Protocol (GRP) pioneers the first trustless Activity Scori
 - **Axiom**: The GRP leverages Axiom's ZK-technology for on-chain data verification, which is essential for accurately scoring user activity. Within the protocol, the `ActivityScoring` contract interacts with the Axiom service to fetch historical user interaction data from the blockchain. Through a method call to `getUserActivity`, the protocol queries Axiom to obtain and verify on-chain data about user interactions with specific contracts and events. This data, once verified using ZK-proofs, is utilized to compute an activity score for users, which subsequently drives the reimbursement model, ensuring a fair and trustless system for gas fee reimbursements.
 - **Chainlink Adapters**: GRP employs Chainlink Adapters to monitor the Scroll Sepolia Testnet and Layer 1 blockchains for occurrences of specified contract events. When such events are detected, the adapter triggers a call to the `updateReimbursement` function in the Gas Reimbursement Platform contract. This function call passes along the necessary data (project address, user address, gas fee) from the detected blockchain event, enabling the protocol to accurately update the reimbursement amounts for users based on their interactions with the projects enlisted in the protocol.
 
-### Live Demo: [Gasgift Reimbursement Protocol](https://gas-reimbursement.vercel.app/)
-![Gasgift](https://github.com/chiguayeshao/gas-reimbursement-platform/blob/main/public/gas-reimbursement.png)
+### Live Demo: [GasGift Reimbursement Protocol](https://gas-reimbursement.vercel.app/)
+![GasGift](https://github.com/chiguayeshao/gas-reimbursement-platform/blob/main/public/gas-reimbursement.png)
 
 ### Demo Vedio: [GasGift Reimbursement Protocol Youtube](https://youtu.be/qSxtGkCf038)
 
