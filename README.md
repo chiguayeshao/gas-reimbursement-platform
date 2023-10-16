@@ -35,11 +35,15 @@ Gasgift Reimbursement Protocol (GRP) pioneers the first trustless Activity Scori
 - **Chainlink Adapters**: GRP employs Chainlink Adapters to monitor the Scroll Sepolia Testnet and Layer 1 blockchains for occurrences of specified contract events. When such events are detected, the adapter triggers a call to the `updateReimbursement` function in the Gas Reimbursement Platform contract. This function call passes along the necessary data (project address, user address, gas fee) from the detected blockchain event, enabling the protocol to accurately update the reimbursement amounts for users based on their interactions with the projects enlisted in the protocol.
 
 ### Live Demo: [Gasgift Reimbursement Protocol](https://gas-reimbursement.vercel.app/)
+![Gasgift](https://github.com/chiguayeshao/gas-reimbursement-platform/blob/main/public/gas-reimbursement.png)
 
 ### Demo Vedio: [demo-link](http://demo-link.com)
+
 ### Github Repo:
-    - 合约: [Contract Repo](https://github.com/chiguayeshao/Gas-Reimbursement-Contract)
-    - 前端: [Frontend Repo](https://github.com/chiguayeshao/gas-reimbursement-platform)
+    
+#### 合约: [Contract Repo](https://github.com/chiguayeshao/Gas-Reimbursement-Contract)
+#### 前端: [Frontend Repo](https://github.com/chiguayeshao/gas-reimbursement-platform)
+
 
 ### Conclusion
 GRP is a revolutionary solution addressing the challenges of gas fees on Ethereum, promoting user engagement across various sectors like DeFi, NFTs, and DAOs by providing a robust and trustless reimbursement infrastructure.
