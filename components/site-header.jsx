@@ -41,7 +41,7 @@ export function SiteHeader() {
             <GitHubLogoIcon className="h-6 w-6" />
           </Button> */}
 
-          {/* <Button
+          <Button
             variant="ghost"
             size="icon"
             onClick={() =>
@@ -49,8 +49,8 @@ export function SiteHeader() {
             }
           >
             <TwitterLogoIcon className="h-6 w-6" />
-          </Button> */}
-          {/* <Button
+          </Button>
+          <Button
             variant="ghost"
             size="icon"
             onClick={() =>
@@ -58,7 +58,7 @@ export function SiteHeader() {
             }
           >
             <DiscordLogoIcon className="h-6 w-6" />
-          </Button> */}
+          </Button>
           <Button
             className="bg-[#fadfba] hover:bg-[#ed7255] text-[#ed7255] hover:text-white transform hover:scale-105"
             onClick={() => {

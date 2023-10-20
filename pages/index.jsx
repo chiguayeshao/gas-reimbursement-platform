@@ -3,6 +3,7 @@ import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { Button } from "@/components/ui/button"
 import AnalysisCard from "@/components/AnalysisCard"
+import Image from "next/image"
 
 const Home = () => {
   return (
@@ -18,8 +19,16 @@ const Home = () => {
 
       <div className="flex flex-col items-center justify-center min-h-screen">
         <AnalysisCard />
-      </div>
 
+        <div className="flex flex-col items-center justify-center gap-2 mt-20">
+          <div className="font-bold text-3xl">Built with the Best</div>
+          <div>Thanks to our best Partners and Services.</div>
+          <div className="flex flex-row justify-between gap-8">
+            <Image src="/scrollLogo.svg" alt="Logo" width={256} height={128} />
+            <Image src="/chainlinkLogo.svg" alt="Logo" width={256} height={128} />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
